@@ -11,18 +11,24 @@ import Foundation
 enum API: String {
     case following
     case repos
-    case userDetail = ""
+    case userDetail
     
     func getURL() -> URL? {
-        guard let userName = User.current.login else {
+        guard let userName = User.login else {
             return nil
         }
-        let composedURLString = "\(NetworkManager.baseURL)\(userName)/\(self.rawValue)/"
+        var composedURLString = ""
+        if self != .userDetail {
+            composedURLString = "\(NetworkManager.baseURL)\(userName)/\(self.rawValue)"
+        } else {
+            composedURLString = "\(NetworkManager.baseURL)\(userName)"
+        }
         return URL(string: composedURLString)
     }
 }
 
 class NetworkManager {
+    static let shared = NetworkManager()
     static let baseURL = "https://api.github.com/users/"
     //By default, the URLSessions are GET requests
     func getFollowingList(completion: @escaping ([FollowingUser]?) -> (Void)) {

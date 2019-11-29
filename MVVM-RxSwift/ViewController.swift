@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "launchLanding", let destination = segue.destination as?  ContainerViewController {
-            User.current.login = self.textToPass
+            User.login = self.textToPass
         }
     }
 }

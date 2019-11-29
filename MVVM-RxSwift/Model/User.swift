@@ -9,8 +9,7 @@
 import Foundation
 
 class User: Codable {
-    static let current = User()
-    var login: String?
+    static var login: String?
     var avatar_url: String?
     var html_url: String?
     var starred_url: String?

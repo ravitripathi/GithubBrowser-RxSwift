@@ -24,6 +24,7 @@
 		417C9E02239159A8001AE88E /* FollowingUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C9E01239159A8001AE88E /* FollowingUser.swift */; };
 		417C9E04239194E9001AE88E /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C9E03239194E9001AE88E /* Repo.swift */; };
 		417C9E072391A058001AE88E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C9E062391A058001AE88E /* User.swift */; };
+		417C9E0A2391AAF7001AE88E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 417C9E092391AAF7001AE88E /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				417C9E0A2391AAF7001AE88E /* Kingfisher in Frameworks */,
 				414C5EC5238E9D0500EC8C18 /* RxCocoa in Frameworks */,
 				414C5EC3238E9D0500EC8C18 /* RxSwift in Frameworks */,
 				414C5EC1238E9D0500EC8C18 /* RxRelay in Frameworks */,
@@ -125,6 +127,7 @@
 				414C5EC0238E9D0500EC8C18 /* RxRelay */,
 				414C5EC2238E9D0500EC8C18 /* RxSwift */,
 				414C5EC4238E9D0500EC8C18 /* RxCocoa */,
+				417C9E092391AAF7001AE88E /* Kingfisher */,
 			);
 			productName = "MVVM-RxSwift";
 			productReference = 414C5EA8238E9C7400EC8C18 /* MVVM-RxSwift.app */;
@@ -156,6 +159,7 @@
 			mainGroup = 414C5E9F238E9C7400EC8C18;
 			packageReferences = (
 				414C5EBF238E9D0500EC8C18 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				417C9E082391AAF7001AE88E /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 414C5EA9238E9C7400EC8C18 /* Products */;
 			projectDirPath = "";
@@ -402,6 +406,14 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		417C9E082391AAF7001AE88E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -419,6 +431,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 414C5EBF238E9D0500EC8C18 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
+		};
+		417C9E092391AAF7001AE88E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 417C9E082391AAF7001AE88E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

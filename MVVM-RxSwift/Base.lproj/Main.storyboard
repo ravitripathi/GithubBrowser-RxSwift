@@ -140,6 +140,11 @@
                         <viewLayoutGuide key="safeArea" id="UUA-19-6aP"/>
                     </view>
                     <navigationItem key="navigationItem" id="O1w-p3-K7n"/>
+                    <connections>
+                        <outlet property="userHandle" destination="pys-TQ-4RD" id="czk-TL-LAn"/>
+                        <outlet property="userImageView" destination="s2Y-ZE-NxA" id="Asu-Dx-TRp"/>
+                        <outlet property="userName" destination="fke-f7-x8W" id="azk-Wk-7eD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHB-gA-9l6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
