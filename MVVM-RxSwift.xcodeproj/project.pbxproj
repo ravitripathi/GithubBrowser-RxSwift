@@ -23,6 +23,7 @@
 		417C9E0023915561001AE88E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C9DFF23915561001AE88E /* NetworkManager.swift */; };
 		417C9E02239159A8001AE88E /* FollowingUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C9E01239159A8001AE88E /* FollowingUser.swift */; };
 		417C9E04239194E9001AE88E /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C9E03239194E9001AE88E /* Repo.swift */; };
+		417C9E072391A058001AE88E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C9E062391A058001AE88E /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		417C9DFF23915561001AE88E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		417C9E01239159A8001AE88E /* FollowingUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingUser.swift; sourceTree = "<group>"; };
 		417C9E03239194E9001AE88E /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		417C9E062391A058001AE88E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				417C9E01239159A8001AE88E /* FollowingUser.swift */,
 				417C9E03239194E9001AE88E /* Repo.swift */,
+				417C9E062391A058001AE88E /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				417C9E04239194E9001AE88E /* Repo.swift in Sources */,
 				414C5ECD238EB0B900EC8C18 /* ContainerViewModel.swift in Sources */,
 				417C9E02239159A8001AE88E /* FollowingUser.swift in Sources */,
+				417C9E072391A058001AE88E /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

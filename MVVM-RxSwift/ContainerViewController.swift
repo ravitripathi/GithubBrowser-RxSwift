@@ -17,7 +17,6 @@ class ContainerViewController: UIViewController {
     var viewModel = ContainerViewModel()
     let disposeBag = DisposeBag()
     
-    var userName: String?
     override func viewDidLoad() {
         super.viewDidLoad()
     }

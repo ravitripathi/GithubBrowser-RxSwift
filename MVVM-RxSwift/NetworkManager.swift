@@ -8,17 +8,13 @@
 
 import Foundation
 
-class User {
-    static let current = User()
-    var userName: String?
-}
-
 enum API: String {
     case following
     case repos
+    case userDetail = ""
     
     func getURL() -> URL? {
-        guard let userName = User.current.userName else {
+        guard let userName = User.current.login else {
             return nil
         }
         let composedURLString = "\(NetworkManager.baseURL)\(userName)/\(self.rawValue)/"
@@ -28,8 +24,7 @@ enum API: String {
 
 class NetworkManager {
     static let baseURL = "https://api.github.com/users/"
-    
-    
+    //By default, the URLSessions are GET requests
     func getFollowingList(completion: @escaping ([FollowingUser]?) -> (Void)) {
         guard let url = API.following.getURL() else {
             return
@@ -48,7 +43,7 @@ class NetworkManager {
         task.resume()
     }
     
-    func getRepoList() {
+    func getRepoList(completion: @escaping ([Repo]?) -> (Void)) {
         guard let url = API.repos.getURL() else {
             return
         }
@@ -59,7 +54,25 @@ class NetworkManager {
                     return
             }
             
-            if let data = data, let decodedResponse = try? JSONDecoder().decode([FollowingUser].self, from: data) {
+            if let data = data, let decodedResponse = try? JSONDecoder().decode([Repo].self, from: data) {
+                completion(decodedResponse)
+            }
+        }
+        task.resume()
+    }
+    
+    func getUserDetails(completion: @escaping (User?)->(Void)) {
+        guard let url = API.userDetail.getURL() else {
+            return
+        }
+        let task = URLSession(configuration: URLSessionConfiguration.default).dataTask(with: url) { (data, response, error) in
+            guard let httpResponse = response as? HTTPURLResponse,
+                (200...299).contains(httpResponse.statusCode) else {
+                    completion(nil)
+                    return
+            }
+            
+            if let data = data, let decodedResponse = try? JSONDecoder().decode(User.self, from: data) {
                 completion(decodedResponse)
             }
         }
