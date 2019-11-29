@@ -19,6 +19,10 @@
 		414C5EC7238EA51A00EC8C18 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414C5EC6238EA51A00EC8C18 /* ContainerViewController.swift */; };
 		414C5EC9238EA8ED00EC8C18 /* FollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414C5EC8238EA8ED00EC8C18 /* FollowersViewController.swift */; };
 		414C5ECB238EA8FF00EC8C18 /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414C5ECA238EA8FF00EC8C18 /* RepoListViewController.swift */; };
+		414C5ECD238EB0B900EC8C18 /* ContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414C5ECC238EB0B900EC8C18 /* ContainerViewModel.swift */; };
+		417C9E0023915561001AE88E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C9DFF23915561001AE88E /* NetworkManager.swift */; };
+		417C9E02239159A8001AE88E /* FollowingUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C9E01239159A8001AE88E /* FollowingUser.swift */; };
+		417C9E04239194E9001AE88E /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C9E03239194E9001AE88E /* Repo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		414C5EC6238EA51A00EC8C18 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		414C5EC8238EA8ED00EC8C18 /* FollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewController.swift; sourceTree = "<group>"; };
 		414C5ECA238EA8FF00EC8C18 /* RepoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewController.swift; sourceTree = "<group>"; };
+		414C5ECC238EB0B900EC8C18 /* ContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewModel.swift; sourceTree = "<group>"; };
+		417C9DFF23915561001AE88E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		417C9E01239159A8001AE88E /* FollowingUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingUser.swift; sourceTree = "<group>"; };
+		417C9E03239194E9001AE88E /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +86,20 @@
 				414C5EC6238EA51A00EC8C18 /* ContainerViewController.swift */,
 				414C5EC8238EA8ED00EC8C18 /* FollowersViewController.swift */,
 				414C5ECA238EA8FF00EC8C18 /* RepoListViewController.swift */,
+				414C5ECC238EB0B900EC8C18 /* ContainerViewModel.swift */,
+				417C9DFF23915561001AE88E /* NetworkManager.swift */,
+				417C9E0523919E7B001AE88E /* Model */,
 			);
 			path = "MVVM-RxSwift";
+			sourceTree = "<group>";
+		};
+		417C9E0523919E7B001AE88E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				417C9E01239159A8001AE88E /* FollowingUser.swift */,
+				417C9E03239194E9001AE88E /* Repo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,8 +185,12 @@
 				414C5EAC238E9C7400EC8C18 /* AppDelegate.swift in Sources */,
 				414C5EC9238EA8ED00EC8C18 /* FollowersViewController.swift in Sources */,
 				414C5EC7238EA51A00EC8C18 /* ContainerViewController.swift in Sources */,
+				417C9E0023915561001AE88E /* NetworkManager.swift in Sources */,
 				414C5ECB238EA8FF00EC8C18 /* RepoListViewController.swift in Sources */,
 				414C5EAE238E9C7400EC8C18 /* SceneDelegate.swift in Sources */,
+				417C9E04239194E9001AE88E /* Repo.swift in Sources */,
+				414C5ECD238EB0B900EC8C18 /* ContainerViewModel.swift in Sources */,
+				417C9E02239159A8001AE88E /* FollowingUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

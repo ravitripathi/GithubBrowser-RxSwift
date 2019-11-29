@@ -7,16 +7,21 @@
 //
 
 import UIKit
+import RxSwift
 
 class ContainerViewController: UIViewController {
 
     var followerVC: FollowersViewController?
     var repoListVC: RepoListViewController?
     
+    var viewModel = ContainerViewModel()
+    let disposeBag = DisposeBag()
+    
     var userName: String?
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "repoListSegue" {
