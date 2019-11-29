@@ -168,10 +168,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
         </scene>
-        <!--Followers View Controller-->
+        <!--Following View Controller-->
         <scene sceneID="qT7-sQ-Iio">
             <objects>
-                <viewController id="DXV-77-cvb" customClass="FollowersViewController" customModule="MVVM_RxSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DXV-77-cvb" customClass="FollowingViewController" customModule="MVVM_RxSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="acS-4I-3L2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="323"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -198,7 +198,7 @@
                         <viewLayoutGuide key="safeArea" id="psl-Fi-2ag"/>
                     </view>
                     <connections>
-                        <outlet property="followerCollectionView" destination="cTr-QL-OUD" id="EOj-GM-tH6"/>
+                        <outlet property="followingCollectionView" destination="cTr-QL-OUD" id="EOj-GM-tH6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cot-FR-5nc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

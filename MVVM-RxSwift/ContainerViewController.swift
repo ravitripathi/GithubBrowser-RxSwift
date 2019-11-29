@@ -17,7 +17,7 @@ class ContainerViewController: UIViewController {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userHandle: UILabel!
     
-    var followerVC: FollowersViewController?
+    var followerVC: FollowingViewController?
     var repoListVC: RepoListViewController?
     public var userData: PublishSubject<User> = PublishSubject()
     var viewModel = ContainerViewModel()
@@ -48,8 +48,25 @@ class ContainerViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "repoListSegue" {
             self.repoListVC = (segue.destination as? RepoListViewController)
+            self.setupRepoBinding()
         } else if segue.identifier == "followerSegue" {
-            self.followerVC = (segue.destination as? FollowersViewController)
+            self.followerVC = (segue.destination as? FollowingViewController)
+            self.setupFollowingBinding()
         }
+    }
+    
+    func setupFollowingBinding() {
+        guard let followerVC = self.followerVC else {
+            return
+        }
+        viewModel
+            .followerList
+            .observeOn(MainScheduler.instance)
+            .bind(to: followerVC.followerList)
+            .disposed(by: disposeBag)
+    }
+    
+    func setupRepoBinding() {
+        
     }
 }
